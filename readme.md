@@ -1,5 +1,3 @@
-![screenshot](https://castawaylabs.github.io/cachet-monitor/screenshot.png)
-
 ## Features
 
 - [x] Creates & Resolves Incidents

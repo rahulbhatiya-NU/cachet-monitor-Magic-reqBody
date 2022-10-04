@@ -4,7 +4,7 @@ WORKDIR /build
 COPY . .
 
 RUN go mod tidy
-RUN cd cli && CGO_ENABLED=0 go build -ldflags "-s" -o app .
+RUN cd cli && CGO_ENABLED=0 go build -ldflags "-s" -o ../app .
 
 FROM alpine:3.14.2
 WORKDIR /app
