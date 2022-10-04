@@ -3,9 +3,8 @@ WORKDIR /build
 
 COPY . .
 
-RUN go mod init cachet-monitor
 RUN go mod tidy
-RUN CGO_ENABLED=0 go build -ldflags "-s" -o app .
+RUN cd cli && CGO_ENABLED=0 go build -ldflags "-s" -o app .
 
 FROM alpine:3.14.2
 WORKDIR /app
